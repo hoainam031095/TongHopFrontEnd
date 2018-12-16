@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Casamento</title>
+	<script type="text/javascript" src = "jquery\jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src = "jquery\jquery.validate.min.js"></script>
+	<script type="text/javascript" src= "jquery\icheck\icheck.min.js"></script>
+	<script type="text/javascript" src = "js\HTMLcasamento.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="jquery\icheck\skins\minimal\minimal.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome\css\font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="HTMLcasamento.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div id = "font">
+		<div id = "menu-scroll">
+			<div class = "scroll-main">
+				<div class = "float left">
+					<a href="#"><img src="image/m&t.png"></a>
+				</div>
+				<div class = "float center">
+					<ul>
+						<li><a class="menu-local" href="#">local</a></li>
+						<li><a class ="menu-rsvp" href="#">r.s.v.p</a></li>
+						<li><a class ="menu-onde" href="#">ondeficar</a></li>
+						<li><a class ="menu-pre" href="#">presentes</a></li>
+					</ul>
+				</div>
+				<div class = "float right">
+					<a><img src="image/logomenu.png"></a>
+				</div>
+			</div>
+		</div>
+		<div id = "hearder-repon">
+			<div id = "menu-popup" data-popup="popup-2">
+				<ul>
+					<li><a href="#" data-popup-close = "popup-2" class = "menu-local">local</a></li>
+					<li><a href="#" data-popup-close = "popup-2" class = "menu-rsvp">r.s.v.p</a></li>
+					<li><a href="#" data-popup-close = "popup-2" class = "menu-onde">onde ficar</a></li>
+					<li><a href="#" data-popup-close = "popup-2" class = "menu-pre">presentes</a></li>
+				</ul>
+			</div>
+			<div class = "menu-close">
+			</div>
+			<div class = "top">
+				<a href="#" class ="menu-toggel" data-popup-open= "popup-2"><i class="fa fa-bars" aria-hidden="true"></i></a>
+				<a href="#"><img src="image/repon/logo1.png"></a>
+			</div>
+			<div class = "bottom">
+				<img src="image/repon/logo2.png">
+			</div>
+		</div>
+		<header id="header">
+			<div class = "top">
+				<ul>
+					<li class = "text"><a class="main-local" href = "#">local</a></li>
+					<li class = "text menu-rsvp"><a class ="main-rsvp" href = "#">r.s.v.p</a></li>
+					<li><a href = "#"><img src="image/logo.png"/></a></li>
+					<li class = "text menu-onde"><a class ="main-onde" href = "#">ondeficar</a></li>
+					<li class = "text menu-pre"><a cl ass ="main-pre"href = "#">presentes</a></li>
+				</ul>
+			</div>
+		</header>
+		<content id="content">
+			<div class = "data">
+				<div class = "text">
+					<h1>sábado,05 de dezembro de 2015, às 11 horas.</h1>
+				</div>
+			</div>
+			<div class = "local">
+				<div class = "recep-celeb">
+					<div class = "left">
+						<div class = "image">
+							<img src="image/recep.png">
+						</div>
+						<div class = "text">
+							<h1>celebração</h1>
+							<h3>Capela são vicente de paula</h3>
+							<span>Rua São Vicente, 100, JuvevÊ, Curitiba-PR</span>
+						</div>
+					</div>
+					<div class = "right">
+						<div class = "image">
+							<img src="image/celeb.png">
+						</div>
+						<div class = "text">
+							<h1>recepção</h1>
+							<h3>Capela são vicente de paula</h3>
+							<span>Rua São Vicente, 100, JuvevÊ, Curitiba-PR</span>
+						</div>
+					</div>
+				</div>
+				<div class = "map">
+					<!-- <img src="image/backgroudmap.jpg"> -->
+				</div>
+			</div>
+			<div class = "rsvp">
+				<div class = "left">
+					<div class = "left-text">
+						<div class = "text">
+							<h1>r.s.v.p.</h1>
+							<span>Será uma alegria compartilhar este momento com nossas famílias e amigos. Mas entendemos que nem sempre <br>é possível estar presente. Por isso, por favor, confirme a sua presença.</span>
+						</div>
+					</div>
+					<div>
+						<img src="image/rsvp.png">
+					</div>
+				</div>
+				<div class = "right">
+					<form>
+						<div class = "text">
+							<div class = "nome">
+								<h2>nome completo:</h2>
+								<input class = "margin" type="text" name="nome" value="" autocomplete="off" placeholder="">
+							</div>
+							<div class = "vc-vai margin">
+								<h2 class = "margin">você irá ao casamento?</h2>
+								<div class = "radio">
+									<input type="radio" name="vc" checked="checked" /><span>SIM</span>
+									<input type="radio" name="vc"/><span>NÃO</span>
+								</div>
+							</div>
+							<div class = "qtos">
+								<h2 class = "margin">se sim, com quantos acompanhantes?</h2>
+								<select class = "margin" name="qtos">
+									<option value="" disabled="disabled" selected="selected">Selecione</option>
+									<option value="">+1</option>
+									<option value="">+2</option>
+									<option value="">+3</option>
+									<option value="">+4</option>
+								</select>
+							</div>
+							<div class = "enviar">
+								<a data-popup-open="popup-1" href = "#"><button><h2>enviar</h2></button></a>
+							</div>
+							<div id = "enviar-popup" data-popup="popup-1">
+								<div class = "close">
+									<a class="popup-close" data-popup-close="popup-1" href="#"><img src="image/close.png"></a>
+								</div>
+								<div class = "obrigado-mt">
+									<h1 class = "obrigado">Obrigado pela sua</br>confirmação.</h1>
+									<p class = "mt">M&T</p>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class = "onde">
+				<div class = "text">
+					<h1>onde ficar</h1>
+					<h2 class = "light sug">sugestão de hotel:</h2>
+					<h2 class = "bristol">bristol centro cívico flexy</h2>
+					<h2 class = "light">Rua Deputado Mário de Barros, 1158, Centro Cívico, Curitiba-PR</br>
+						teleFone: (41) 3250-1500
+					</h2>
+					<h5 class = "bristolhoteis"><a href="#">bristolhoteis.com.br</a></h5>
+					<span class = "light">Valor da diária: R$174 + 5%</br>
+						Nas reservas feitas por telefone, é necessário informar nome dos noivos. Se a quantidade de apartamentos reservados por convidados for acima de 10, a diária terá o valor promocional de R$142 + 5%.
+					</span>
+				</div>
+				<div class = "pinh">
+					<img src="image/pinh.png">
+				</div>
+			</div>
+			<div class = "presentes">
+				<div class = "main">
+					<div class = "text">
+						<h1>gostaria de nos presentear?</h1>
+						<span>Selecionamos alguns momentos como forma de presente. Escolha o que achar mais legal. ;-)</span>
+					</div>
+					<div class = "image">
+						<div class = "width img-left">
+							<img src="image/imagem1.jpg">
+							<div class = "image-text">
+								<div class = "image-text-left">
+									<h2 class = "ten light">viagem de lua<br>de mel</h2>
+									<h2 class = "gia">R$ 50</h2>
+								</div>
+								<button><h2 class = "button light">comprar</h2></button>
+							</div>
+							<img src="image/imagem1.jpg">
+							<div class = "image-text">
+								<div class = "image-text-left">
+									<h2 class = "ten light">viagem de lua<br>de mel</h2>
+									<h2 class = "gia">R$ 50</h2>
+								</div>
+								<button><h2 class = "button light">comprar</h2></button>
+							</div>
+						</div>
+						<div class = "width img-center">
+							<img src="image/imagem2.jpg">
+							<div class = "image-text">
+								<div class = "image-text-left">
+									<h2 class = "ten light">Jantar para dois</br>na praia</h2>
+									<h2 class = "gia">R$ 250</h2>
+								</div>
+								<button><h2 class = "button light">comprar</h2></button>
+							</div>
+							<img src="image/imagem2.jpg">
+							<div class = "image-text">
+								<div class = "image-text-left">
+									<h2 class = "ten light">Jantar para dois</br>na praia</h2>
+									<h2 class = "gia">R$ 250</h2>
+								</div>
+								<button><h2 class = "button light">comprar</h2></button>
+							</div>
+						</div>
+						<div class = "width img-right">
+							<img src="image/imagem3.jpg">
+							<div class = "image-text">
+								<div class = "image-text-left">
+									<h2 class = "ten light">drinks</br>refrescantes</h2>
+									<h2 class = "gia">R$ 50</h2>
+								</div>
+								<button><h2 class = "button light">comprar</h2></button>
+							</div>
+							<img src="image/imagem3.jpg">
+							<div class = "image-text">
+								<div class = "image-text-left">
+									<h2 class = "ten light">drinks</br>refrescantes</h2>
+									<h2 class = "gia">R$ 50</h2>
+								</div>
+								<button><h2 class = "button light">comprar</h2></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</content>
+		<footer id = "footer">
+			<hr class = "left">
+			<img src="image/footer.png">
+			<hr class = "right">
+		</footer>
+	</div>
+</body>
+</html>

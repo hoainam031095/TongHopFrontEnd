@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ZET</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="jquery/bxslider/jquery.bxslider.css">
+	<link rel="stylesheet" type="text/css" href="THcatHTMLzet.css">
+	<link rel="stylesheet" type="text/css" href="css/THcatHTMLzetRespon.css">
+	<link rel="stylesheet" type="text/css" href="css/THcatHTMLzetRespon2.css">
+
+	<script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="jquery/bxslider/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="js/THcatHTMLzet.js"></script>
+</head>
+<body>
+	<div>	
+		<header id="header" >
+			<div class="header-hover">
+				<div class="container max-width">
+					<div class="hero" style="position: fixed;">
+						<div class = "col-xs-6 col-sm-6 col-md-6">
+							<a href="#"><img src="images/zet.png"></a>
+						</div>
+						<div class = "col-xs-6 col-sm-6 col-md-6 menu-header">
+							<a href="#" class="menu">MENU</a>
+							<a href="#" id = "menu-click"><i class="fa fa-bars" aria-hidden="true"></i></a>
+							<ul class = "menu-toggle">
+								<li><a href="#">HEARDER</a></li>
+								<li><a href="#service-background">SERVICES</a></li>
+								<li><a href="#main-works">WORKS</a></li>
+								<li><a href="#main-testimonial">CLIENTS</a></li>
+								<li><a href="#team">TEAM</a></li>
+								<li><a href="#pricing">PRICING</a></li>
+								<li><a href="#contact">CONTACT</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="navigation">
+						<div>
+							<h3>Something Nothing</h3>
+							<span>Enean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend <br>ac, enim iam ultricies nisi eleifend tellus.</span>
+							<h5><a href="#">LET’S TALK</a></h5>
+						</div>
+					</div>
+					<div class="scoll">
+						<a href="#" id = "img-scoll"><img src="images/scoll.png"></a>
+						<div style="clear: both;"></div>
+						<img src="images/scoll2.png">
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="modal" id="popup-dangky-giupviectheogio">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div>Dịch vụ giúp việc theo giờ</div>
+          <form action="">
+              <input type="hidden" value="DV0001" id="gvtg-madv">
+              <p>Nơi làm việc: </p>
+              <input type="text" id="gvtg-themdiachi">
+              <p>Ngày làm: </p>
+              <input type="text" id="gvtg-ngaylam">
+              <p>Thời gian làm: </p>
+              <input type="text" id="gvtg-thoigian">
+              <p>Tên liên hệ: </p>
+              <input type="text" id="gvtg-themtenlienhe">
+              <p>Số điện thoại: </p>
+              <input type="text" id="gvtg-sodienthoai">
+              <p>Địa chỉ email: </p>
+              <input  type="text" id="gvtg-email">
+              <p>
+                <button data-toggle="modal" data-target="#popup-xacnhan-giupviectheogio" data-dismiss="modal" class="btn btn-success" id="xacnhandichvu-modal">Tiếp theo</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Hủy</button>
+              </p>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+<div id="button-dangkydichvu">
+      <a href="#" id="dangkydichvu-modal" data-toggle="modal" data-target="#popup-dangky-giupviectheogio" style="position: fixed; bottom: 0px; right: 0px;">Đăng ký dịch vụ</a>
+</div>
+
+<div class="modal" id="popup-xacnhan-giupviectheogio">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div>Xác nhận thông tin</div>
+          <form action="ThemDangKyDichVuServlet">
+              <input type="hidden" value="DV0001" id="gvtg-madv" name="xnmadv">
+              <input type="hidden" id="gvtg-xndiachi" name="xndiachi">
+              <input type="hidden" id="gvtg-xnngaylam" name="xnngaylam">
+              <input type="hidden" id="gvtg-xnthoigian" name="xnthoigian">
+              <input type="hidden" id="gvtg-xntenlienhe" name="xntenlienhe">
+              <input type="hidden" id="gvtg-xnsodienthoai" name="xnsodienthoai">
+              <input type="hidden" id="gvtg-xnemail" name="xnemail">
+
+              <p>Nơi làm việc:<span id="gvtg-xndiachi1"></span></p>
+              <p>Ngày làm:<span id="gvtg-xnngaylam1"></span></p>
+              <p>Thời gian làm:<span id="gvtg-xnthoigian1"></span></p>
+              <p>Tên liên hệ:<span id="gvtg-xntenlienhe1"></span></p>
+              <p>Số điện thoại:<span id="gvtg-xnsodienthoai1"></span></p>
+              <p>Địa chỉ email:<span id="gvtg-xnemail1"></span></p>
+              <p>
+                <button type="submit" class="btn btn-success">Gửi</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Hủy</button>
+              </p>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+		<content id="content">
+			<div id="service-background">
+				<div class="container service">
+					<div class="title">
+						<h3>SERVICES</h3>
+						<span>Awan mripat gendhis angsal Jawa Ipsum nangis rumput wilujeng</span>
+						<hr>
+					</div>
+					<div class="row colums">
+							<div class=" col-md-3 col-sm-6 col-xs-12 icon">
+								<img src="images/icon/1.png">
+								<h5>FULLY RESPONSIVE</h5>
+								<span>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</span>
+							</div>
+							<div class="col-md-3 col-sm-6 col-xs-12 icon">
+								<img src="images/icon/2.png">
+								<h5>EASY CUSTOMIZE</h5>
+								<span>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae.</span>
+							</div>
+							<div class="col-md-3 col-sm-6 col-xs-12 icon">
+								<img src="images/icon/3.png">
+								<h5>SEO READY</h5>
+								<span>Nullam dictum felis eu pede mollis pretium.Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi</span>
+							</div>
+							<div class="col-md-3 col-sm-6 col-xs-12 icon">
+								<img src="images/icon/4.png">
+								<h5>WORKS</h5>
+								<span>Awan mripat gendhis angsal Jawa Ipsum nangis rumput wilujeng</span>
+							</div>
+					</div>
+				</div>
+			</div>
+			<div id="main-works">
+				<div class="title">
+					<h3>WORKS</h3>
+					<span>Awan mripat gendhis angsal Jawa Ipsum nangis rumput wilujeng</span>
+					<hr>
+				</div>
+				<div class="works">
+					<div class="work">
+						<img src="images/works/1.jpg">
+						<h4>BOOMING SHOP</h4>
+						<h5>Website Development</h5>
+					</div>
+					<div class="work"><img src="images/works/2.jpg">
+						<h4>BOOMING SHOP</h4>
+						<h5>Website Development</h5>
+					</div>
+					<div class="work"><img src="images/works/3.jpg">
+						<h4>BOOMING SHOP</h4>
+						<h5>Website Development</h5>
+					</div>
+					<div class="work"><img src="images/works/4.jpg">
+						<h4>BOOMING SHOP</h4>
+						<h5>Website Development</h5>
+					</div>
+					<div class="work"><img src="images/works/5.jpg">
+						<h4>BOOMING SHOP</h4>
+						<h5>Website Development</h5>
+					</div>
+					<div class="work"><img src="images/works/6.jpg">
+						<h4>BOOMING SHOP</h4>
+						<h5>Website Development</h5>
+					</div>
+					<div class="work"><img src="images/works/7.jpg">
+						<h4>BOOMING SHOP</h4>
+						<h5>Website Development</h5>
+					</div>
+					<div class="work"><img src="images/works/8.jpg">
+						<h4>BOOMING SHOP</h4>
+						<h5>Website Development</h5>
+					</div>
+					<div class="work"><img src="images/works/9.jpg">
+						<h4>BOOMING SHOP</h4>
+						<h5>Website Development</h5>
+					</div>
+					<div class="work"><img src="images/works/10.jpg">
+						<h4>BOOMING SHOP</h4>
+						<h5>Website Development</h5>
+					</div>
+					<div class="work"><img src="images/works/11.jpg">
+						<h4>BOOMING SHOP</h4>
+						<h5>Website Development</h5>
+					</div>
+					<div class="work"><img src="images/works/12.jpg">
+						<h4>BOOMING SHOP</h4>
+						<h5>Website Development</h5>
+					</div>
+					<div class="work"><img src="images/works/13.jpg">
+						<h4>BOOMING SHOP</h4>
+						<h5>Website Development</h5>
+					</div>
+					<div class="work"><img src="images/works/14.jpg">
+						<h4>BOOMING SHOP</h4>
+						<h5>Website Development</h5>
+					</div>
+					<div class="work"><img src="images/works/15.jpg">
+						<h4>BOOMING SHOP</h4>
+						<h5>Website Development</h5>
+					</div>
+				</div>
+			</div>
+			<div id="main-testimonial">
+				<div class="container">
+					<div class="title">
+						<h3>HAPPY CLIENTS</h3>
+						<span>Awan mripat gendhis angsal Jawa Ipsum nangis rumput wilujeng</span>
+						<hr>
+					</div>
+					<div class="testimonial row">
+						<ul class="blider">
+							<li>
+								<span> Bebed pupu warni sangsam ngundang ajang, gujeng sirah lair menda bebucal benang; lek-lekan? Madeg pendhet lenggah, "nanem dipetak dhuwung, dipun awis bokong ayam. gendhis angsal Jawa Ipsum nangis rumput wilujeng unyeng-unyeng; pados gujeng benter andhap lisa Leres, lisah, ulem-ulem nedhi gesang manah cangkem: nem aken benter bebucal baita dangu</span>
+								<p>”</p>
+								<div class="col-xs-0 col-sm-3 col-md-5"></div>
+								<div class="col-xs-12 col-sm-6 col-md-2">
+									<img src="images/adam.png"/><br>
+									<span class="name">Vasily Nganu</span><br>
+									<span class="local">Dropbox Senior Developer</span>
+								</div>
+							</li>
+							<li>
+								<span> Bebed pupu warni sangsam ngundang ajang, gujeng sirah lair menda bebucal benang; lek-lekan? Madeg pendhet lenggah, "nanem dipetak dhuwung, dipun awis bokong ayam. gendhis angsal Jawa Ipsum nangis rumput wilujeng unyeng-unyeng; pados gujeng benter andhap lisa Leres, lisah, ulem-ulem nedhi gesang manah cangkem: nem aken benter bebucal baita dangu</span>
+								<p>”</p>
+								<div class="col-xs-0 col-sm-3 col-md-5"></div>
+								<div class="col-xs-12 col-sm-6 col-md-2">
+									<img src="images/adam.png"/><br>
+									<span class="name">Vasily Nganu</span><br>
+									<span class="local">Dropbox Senior Developer</span>
+								</div>
+							</li>
+							<li>
+								<span> Bebed pupu warni sangsam ngundang ajang, gujeng sirah lair menda bebucal benang; lek-lekan? Madeg pendhet lenggah, "nanem dipetak dhuwung, dipun awis bokong ayam. gendhis angsal Jawa Ipsum nangis rumput wilujeng unyeng-unyeng; pados gujeng benter andhap lisa Leres, lisah, ulem-ulem nedhi gesang manah cangkem: nem aken benter bebucal baita dangu</span>
+								<p>”</p>
+								<div class="col-xs-0 col-sm-3 col-md-5"></div>
+								<div class="col-xs-12 col-sm-6 col-md-2">
+									<img src="images/adam.png"/><br>
+									<span class="name">Vasily Nganu</span><br>
+									<span class="local">Dropbox Senior Developer</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="team">
+				<div class="background">
+					<div class="title">
+						<h3>OUR PROFESSIONAL TEAM</h3>
+						<span>Awan mripat gendhis angsal Jawa Ipsum nangis rumput wilujeng</span>
+						<hr>
+					</div>
+					<div class="container box">
+						<div class="row-box">
+							<div class="col col-xs-12 col-sm-6 col-md-3">
+								<img src="images/box/1.jpg">
+								<div class="text-col">
+									<h6>READ HIS BIO</h6>
+									<p></p>
+									<h5>Salazar Slytherin</h5>
+									<span>CEO</span>
+									<ul>
+										<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+										<li><a class="none-back" href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col col-xs-12 col-sm-6 col-md-3">
+								<img src="images/box/2.jpg">
+								<div class="text-col">
+									<h6>READ HIS BIO</h6>
+									<p></p>
+									<h5>GodricT Gryffindor</h5>
+									<span>Lead Developer</span>
+									<ul>
+										<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+										<li><a class="none-back" href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col col-xs-12 col-sm-6 col-md-3">
+								<img src="images/box/3.jpg">
+								<div class="text-col">
+									<h6>READ HER BIO</h6>
+									<p></p>
+									<h5>Rowena Ravenclaw</h5>
+									<span>Lead Designer</span>
+									<ul>
+										<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+										<li><a class="none-back" href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col col-xs-12 col-sm-6 col-md-3">
+							 	<img src="images/box/4.jpg">
+								<div class="text-col">
+									<h6>READ HER BIO</h6>
+									<p></p>
+									<h5>Helga Hufflepuff</h5>
+									<span>Marketing</span>
+									<ul>
+										<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+										<li><a class="none-back" href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class ="button">
+						<a href="#">MEET OUR FULL TEAMs</a>
+					</div>
+				</div>
+			</div>
+			<div id="clients">
+				<div class="container">
+					<div class="coca col-xs-6 col-sm-6 col-md-2">
+						<img src="images/brand/1.png">
+					</div>
+					<div class="drop col-xs-6 col-sm-6 col-md-3">
+						<img src="images/brand/2.png">
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-2">
+						<img src="images/brand/3.png">
+					</div>
+					<div class="zen col-xs- col-sm-6 col-md-3">
+						<img src="images/brand/4.png">
+					</div>
+					<div class="nokia col-xs-6 col-sm-6 col-md-2">
+						<img src="images/brand/5.png">
+					</div>
+				</div>
+			</div>
+			<div id="pricing">
+				<div class="title">
+						<h3>PRICING TABLE</h3>
+						<span>Awan mripat gendhis angsal Jawa Ipsum nangis rumput wilujeng</span>
+						<hr>
+				</div>
+				<div class="container pricing-table">
+					<div class="standard col-xs-12 col-sm-12 col-md-4">
+						<div class="row row-standard row-margin">
+							<h5>Standard Pack</h5>
+							<h3>$50</h3>
+							<h4>PER MONTH</h4>
+						</div>
+						<div class="row row-standard-span">
+							<span>exercitation ullaborum sed do<br>eiusmod tempor incididunt ut  quis<br>nostrud exercitation ullamco laboris</span><br>
+							<a class="button">SIGN UP</a>
+						</div>
+					</div>
+					<div class="best col-xs-12 col-sm-12 col-md-4">
+						<div class="row row-best">
+							<h5>Best Pack</h5>
+							<h3>$100</h3>
+							<h4>PER MONTH</h4>
+						</div>
+						<div class="row row-best-span">
+							<span>eiusmod tempor incididunt ut  quis<br>nostrud exercitation ullamco laboris<br>minim aliqua labore dolore nostrud<br>laboris ullamco incididunt quis</span><br>
+							<a class="button">SIGN UP</a>
+						</div>
+					</div>
+					<div class="vip col-xs-12 col-sm-12 col-md-4">
+						<div class="row row-vip row-margin">
+							<h5>VIP Pack</h5>
+							<h3>$250</h3>
+							<h4>PER MONTH</h4>
+						</div>
+						<div class="row row-vip-span">
+							<span>incididunt ut labore et dolore  magna<br> aliqua Ut enim ad minim veniam quis nostrud<br> exercitation ullaborum sed do<br> eiusmod tempor incididunt ut  quis<br> nostrud exercitation ullamco laboris</span><br>
+							<a class="button">SIGN UP</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="contact">
+				<div class="map">
+					<img src="images/map.jpg">
+				</div>
+				<div class="form-box">
+					<div class="background-box">
+						<form class="form-input">
+							<div class="form-margin">
+								<label for="name">Name</label>
+								<input type="text" name="name">
+							</div><br>
+							<div class="form-margin">
+								<label for="email">Email</label>
+								<input type="text" name="email">
+							</div><br>
+							<div class="form-margin">
+								<label for="phone">Phone</label>
+								<input type="text" name="phone">
+							</div><br>
+							<div class="form-margin">
+								<label for="message">Message</label>
+								<textarea name="message"></textarea>
+							</div><br>
+							<button type="button" name="submit">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</content>
+		<div style="clear:both;"></div>
+		<footer id="footer">
+			<div class="logo">
+				<img src="images/zet2.png">
+				<span>© Copyright 2015. Allright Reserved</span>
+			</div>
+			<div class="social">
+				<span>Stay In Touch</span>
+				<ul>
+					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#">g+</a></li>
+					<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

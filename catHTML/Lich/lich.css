@@ -1,0 +1,15 @@
+table{
+	margin: auto;
+	border: Firebrick solid 2px; 
+}
+input{
+	width: 50px;
+	height: 40px;
+}
+input:hover{
+	border: Firebrick solid 2px;
+}
+#chon{
+	background: Firebrick;
+	height: 40px;
+}

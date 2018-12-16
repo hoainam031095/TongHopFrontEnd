@@ -1,0 +1,960 @@
+/* -------------- Reset CSS -------------- */
+@import "fonts/font.css";
+body{
+	font-family:Brandon Grotesque, arial;
+	font-size:13px;
+}
+body,form{
+	margin:0;
+	padding:0;
+	color: #1c2c42;
+}
+:focus {/* remember to define focus styles! */
+	outline: 0;
+}
+table {/* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a img {
+	border: 0;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+a{
+	text-decoration:none;
+    outline:none;
+}
+
+*{
+	box-sizing: border-box;
+}
+h1,h2,h3,h4,p{
+	margin: 0;
+	text-transform: uppercase;
+}
+/*==========main css=================*/
+#font{
+	background-color: #fbfaf6;
+}
+/*======menu-scroll====*/
+#menu-scroll{
+	width: 100%;
+	height: 73px;
+    padding-top: 15px;
+	display: none;
+	background-color: white;
+}
+#menu-scroll .scroll-main{
+	width: 1205px;
+	height: 35px;
+	margin:0 auto;
+}
+#menu-scroll .float{
+	float: left;
+}
+#menu-scroll .left{
+	width: 20%;
+}
+#menu-scroll .center{
+	width: 60%;
+	text-align: center;
+}
+#menu-scroll .center ul{
+	height: 55px;
+	margin:0;	
+}
+#menu-scroll .center li{
+	height: 55px;
+	display: inline-block;
+	list-style: none;
+	font-weight: 300;
+	vertical-align: middle;
+	font-size: 22px;
+	text-transform: uppercase;
+	padding: 0 34px;
+	padding-top: 2px;
+}
+#menu-scroll .center a{
+	padding-bottom: 22px;
+	color: #1a2a40;
+}
+#menu-scroll .right{
+	width: 20%;
+	text-align: right;
+}
+/*=========*/
+#hearder-repon{
+	display: none;
+}
+/*=========header=========*/
+#header{
+	display: block;
+	height: 330px;
+}
+#header .top{
+	height: 191px;
+}
+#header .top ul{
+	height: 191px;
+	text-align: center;
+	margin: 0 auto;
+	padding-left: 8%;
+	padding-top: 70px;
+}
+#header .top li{
+	display: inline-block;
+	list-style: none;
+	font-weight: 300;
+	vertical-align: middle;
+	font-size: 22px;
+	text-transform: uppercase;
+	padding: 0 34px;
+}
+#header .top img{
+	margin: 0 auto;
+}
+#header .top a{
+	color: #1a2a40;
+}
+#header .text a:hover{
+	border-bottom: #1a2a40 solid 1px;
+}
+
+/*===========content===========*/
+/*========data=========*/
+.data {
+	height: 100px;
+	text-align: center;
+}
+.data .text{
+	height: 100px;
+	width: 86%;
+	margin: 0 auto;
+	border-top: #d7d6d0 solid 1px;
+	border-bottom: #d7d6d0 solid 1px;
+}
+.data .text h1{
+	font-weight: bold;
+	padding-top: 26px;
+	font-size: 35px;
+}
+/*=========local==========*/
+.local{
+	height: 573px;
+}
+.local .recep-celeb{
+	height: 225px;
+}
+.local .recep-celeb h1{
+	font-weight: 300;
+	font-size:35px; 
+}
+.local .recep-celeb h3{
+	font-weight: 500;
+	font-size: 20px;
+}
+.local .recep-celeb span{
+	font-weight: 300;
+	font-size: 22px;
+	text-transform: uppercase;
+}
+.local .recep-celeb .left{
+	height: 110px;
+	float: left;
+	width: 50%;
+	margin-top: 55px;
+}
+.local .left .image{
+	padding-right: 30px;
+	float:right;
+	height: 110px;
+	padding-top: 10px;
+}
+.local .left .text{
+	float: right;
+	height: 110px;
+	text-align: right;
+	padding-right: 30px;
+}
+
+.local .recep-celeb .right{
+	height: 110px;
+	float: right;
+	width: 50%;
+	margin-top: 55px;
+}
+.local .right .text{
+	height: 110px;
+	float: left;
+	padding-left: 30px; 
+}
+.local .right .image{
+	padding-left: 30px;
+	float:left;
+	height: 110px;
+	padding-top: 10px;
+}
+
+.local .map{
+	height: 350px;
+	background: url("image/backgroudmap.jpg") no-repeat center center;
+	background-size: cover;
+}
+/*=======rsvp========*/
+.rsvp{
+	height: 550px;
+}
+.rsvp h1{
+	font-weight: bold;
+	font-size:35px; 
+}
+.rsvp span{
+	font-weight: 300;
+	font-size:26px; 
+}
+
+.rsvp .left{
+	float: left;
+	height: 550px;
+	width: 50%;
+	text-align: right;
+}
+.rsvp .left .left-text{
+	height:319px;
+	width: 100%;
+	padding-top: 70px;
+	padding-right: 25px;
+}
+.rsvp .left-text .text{
+	float: right;
+	width: 65%;
+	height: 249px;
+}
+.rsvp .left img{
+	margin-right: 25px;
+}
+.rsvp .right{
+	float: right;
+	height: 550px;
+	width:50%; 
+}
+.rsvp .right span{
+	font-size:21px; 
+}
+.rsvp .right .text{
+	float: left;
+	width: 66%;
+	height: 550px;
+	padding-top: 79px;
+	padding-left: 25px;
+}
+.rsvp .right .margin{
+	margin-top: 10px;
+}
+.rsvp .right .text h2{
+	font-weight: 300;	
+	font-size: 21px;
+}
+.rsvp .right .nome input{
+	font-weight: 500;
+	font-size: 21px;
+	padding-left: 15px;
+	text-transform: uppercase;
+	color: #1c2c42;
+	width: 100%;
+	height: 50px;
+	border: #d4d3cd solid 1px;
+}
+.rsvp .right .nome input:focus{
+	border: #1c2c42 solid 1px;
+}
+.rsvp .right .nome span{
+	font-size: 21px;
+	padding-right:20px; 
+}
+.rsvp .right .vc-vai{
+	border-top: #d7d6d0 solid 1px;
+	border-bottom: #d7d6d0 solid 1px;
+}
+.rsvp .vc-vai .radio{
+	margin-top: 4px;
+	margin-bottom: 10px;
+}
+.rsvp .vc-vai .radio span{
+	margin-right: 25px;
+}
+.rsvp .right .qtos select{
+	width: 46%;
+	height: 50px;
+	border:#d7d6d0 solid 1px;
+}
+.rsvp .right .enviar button{
+	margin-top: 30px;
+	width: 100%;
+	height: 50px;
+	border:none;
+	background-color: #1c2c42;
+	color: white;
+}
+.rsvp .right .enviar h2{
+	width: 80px;
+	margin:0 auto;
+}
+.rsvp .right .enviar button:hover{
+	background-color: #274165;
+
+}
+.rsvp .right .enviar button:hover h2{
+	border-bottom: 2px solid white;
+}
+#enviar-popup{
+	display: none;
+	width: 420px;
+	height: 389px;
+    position: relative;
+    top: -389px;
+    left:0px;
+    background-color: white;
+    border:1px solid #1c2c42;
+	z-index:1;
+}
+#enviar-popup .close{
+	height: 80px;
+	text-align:right;
+}
+#enviar-popup .close img{
+	position: relative;
+	top:20px;
+	right: 20px;
+}
+#enviar-popup .obrigado-mt{
+	padding-top: 50px;
+	text-align: center;
+}
+#enviar-popup .obrigado{
+	font-weight: 300;
+	font-size: 23px;
+}
+#enviar-popup .mt{
+	font-weight:500;
+	font-size: 30px;
+}
+/*========onde===========*/
+.onde {
+	height: 544px;
+}
+.onde .text{
+	width: 822px;
+	margin: 0 auto;
+	text-align: center;
+}
+.onde h1{
+	position: relative;
+	font-weight: bold;
+	font-size: 35px;
+	padding-top: 70px;
+}
+.onde h1::before {
+    content: "";
+    border-bottom: 1px solid;
+    position: absolute;
+    width: 406px;
+    left: -124px;
+    top: 0px;
+    color:#d7d6d0;
+    }
+.onde h1::after {
+    content: "";
+    border-bottom: 1px solid;
+    position: absolute;
+    width: 690px;
+    left: 298px;
+    top: 0px;
+    color:#d7d6d0;
+    }
+.onde h2{
+	font-size: 21px;
+}
+.onde .light{
+	font-weight: 300;
+}
+.onde .sug{
+	padding-top: 60px;
+}
+.onde .bristol{
+	padding-top: 25px;
+}
+
+.onde .bristolhoteis{
+	font-weight: 300;
+	margin: 0;
+	padding: 15px;
+	font-size: 23px;
+}
+.onde .bristolhoteis a{
+	color: #1a2a40;
+	border-bottom: 1px solid #4a5260;
+}
+.onde span{
+	font-size: 20px;
+	color: #909aa8;
+}
+
+.onde .pinh{
+	height: 69px;
+	text-align: center;
+	padding-top: 37px;
+}
+
+/*========presentes=========*/
+.presentes{
+	height: 1238px;
+	text-align: center;
+	clear: both;
+}
+.presentes .main{
+	height: 1238px;
+}
+.presentes .main .text h1{
+	font-weight: bold;
+	font-size: 35px;
+	padding-top: 70px;
+}
+.presentes .main .text span{
+	font-weight: 300;
+	font-style: 35px;
+	font-size: 22px;
+	padding-top: 20px;
+}
+.presentes .image{
+	padding-top: 70px;
+	width:1200px;
+	height: 1100px;
+	margin: 0 auto;
+}
+.presentes .image .width{
+	width: 33.3333333%;
+	float: left;
+}
+.presentes .image .img-left{
+	text-align: left;
+}
+.presentes .image .img-center{
+	text-align: center;
+}
+.presentes .image .img-right{
+	text-align: right;
+}
+.presentes .image .image-text-left{
+	float: left;
+	width: 60%;
+	text-align: left;
+}
+.presentes .image .image-text{
+	margin: 0;
+	height: 124px;
+	width: 96.5%;
+	padding-left: 25px;
+}
+.presentes .image .ten{
+	padding-top: 10px;
+}
+.presentes .image .light{
+	font-weight: 300;
+}
+.presentes .image .gia{
+	padding-top: 7px;
+}
+.presentes .image button{
+	float: right;
+	margin-top: 36px;
+	width: 130px;
+	height: 45px;
+	color: #c7cacd;
+	background-color: #1c2c42;
+	border: none;
+}
+.presentes .image .button{
+	padding-top: 4px;
+}
+/*=======footer========*/
+#footer{
+	height: 330px;
+	text-align: center;
+}
+#footer img{
+	margin-top: 92px;
+}
+#footer .left{
+	width: 500px; 
+	color: #eae5dd;
+	margin:0;
+    position: relative;
+    top: 165px;
+    left: 80px;
+}
+#footer .right{
+	width: 500px; 
+	color: #eae5dd;
+	margin:0;
+    position: relative;
+    top: -78px;
+    left: 765px;
+}
+
+/*======================================================*/
+/*======================================================*/
+/*======================================================*/
+/*======================================================*/
+/*======================================================*/
+/*======================================================*/
+
+@media all and (max-width:640px){
+body{
+	line-height: 30px;
+}
+#header{
+	display: none;
+}
+#hearder-repon {
+	display: block;
+    height: 260px;
+    z-index: 1;
+}
+#hearder-repon .top{
+	position: fixed;
+	padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+	height: 54px;
+	width: 100%;
+	text-align: center;
+	background-color: #fff;
+	border-bottom: 1px solid #ebe6de;
+}
+#hearder-repon .top .menu-toggel{
+	color: #1c2c42;
+	float: left;
+	font-size: 20px;
+}
+#menu-popup{
+	position: fixed;
+	display: none;
+	width: 350px;
+	height: 570px;
+	padding-top: 55px;
+	background:rgb(39,55,75);
+	z-index: 2;
+}
+#menu-popup li{
+	list-style: none;
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 52px;
+}
+#menu-popup a{
+	color: #fbfaf6;
+}
+#hearder-repon .top img{
+	position: relative;
+	left:-7px;
+}
+#hearder-repon .bottom{
+    height: 260px;
+    text-align: center;
+    padding-top: 85px;
+}
+/*========data=========*/
+.data {
+	height: 118px;
+}
+.data .text{
+	height: 118px;
+}
+.data .text h1{
+	width: 60%;
+	margin: 0 auto;
+	padding-top: 15px;
+	font-size: 25px;
+}
+/*=========local==========*/
+.local{
+	height: 593px;
+}
+.local .recep-celeb{
+	height: 293px;
+}
+.local .recep-celeb h1{
+	font-weight: 300;
+	font-size:35px; 
+}
+.local .recep-celeb h3{
+	font-weight: 500;
+	font-size: 20px;
+}
+.local .recep-celeb span{
+	font-weight: 300;
+	font-size: 22px;
+	text-transform: uppercase;
+}
+.local .recep-celeb .left{
+	height: 110px;
+	float: left;
+	width: 50%;
+	margin-top: 55px;
+}
+.local .left .image{
+	padding-right: 30px;
+	float:right;
+	height: 110px;
+	padding-top: 10px;
+}
+.local .left .text{
+	float: right;
+	height: 110px;
+	text-align: right;
+	padding-right: 30px;
+}
+
+.local .recep-celeb .right{
+	height: 110px;
+	float: right;
+	width: 50%;
+	margin-top: 55px;
+}
+.local .right .text{
+	height: 110px;
+	float: left;
+	padding-left: 30px; 
+}
+.local .right .image{
+	padding-left: 30px;
+	float:left;
+	height: 110px;
+	padding-top: 10px;
+}
+
+.local .map{
+	height: 350px;
+	background: url("image/backgroudmap.jpg") no-repeat center center;
+	background-size: cover;
+}
+/*=======rsvp========*/
+.rsvp{
+	height: 550px;
+}
+.rsvp h1{
+	font-weight: bold;
+	font-size:35px; 
+}
+.rsvp span{
+	font-weight: 300;
+	font-size:26px; 
+}
+
+.rsvp .left{
+	float: left;
+	height: 550px;
+	width: 50%;
+	text-align: right;
+}
+.rsvp .left .left-text{
+	height:319px;
+	width: 100%;
+	padding-top: 70px;
+	padding-right: 25px;
+}
+.rsvp .left-text .text{
+	float: right;
+	width: 65%;
+	height: 249px;
+}
+.rsvp .left img{
+	margin-right: 25px;
+}
+.rsvp .right{
+	float: right;
+	height: 550px;
+	width:50%; 
+}
+.rsvp .right span{
+	font-size:21px; 
+}
+.rsvp .right .text{
+	float: left;
+	width: 66%;
+	height: 550px;
+	padding-top: 79px;
+	padding-left: 25px;
+}
+.rsvp .right .margin{
+	margin-top: 10px;
+}
+.rsvp .right .text h2{
+	font-weight: 300;	
+	font-size: 21px;
+}
+.rsvp .right .nome input{
+	font-weight: 500;
+	font-size: 21px;
+	padding-left: 15px;
+	text-transform: uppercase;
+	color: #1c2c42;
+	width: 100%;
+	height: 50px;
+	border: #d4d3cd solid 1px;
+}
+.rsvp .right .nome input:focus{
+	border: #1c2c42 solid 1px;
+}
+.rsvp .right .nome span{
+	font-size: 21px;
+	padding-right:20px; 
+}
+.rsvp .right .vc-vai{
+	border-top: #d7d6d0 solid 1px;
+	border-bottom: #d7d6d0 solid 1px;
+}
+.rsvp .vc-vai .radio{
+	margin-top: 4px;
+	margin-bottom: 10px;
+}
+.rsvp .vc-vai .radio span{
+	margin-right: 25px;
+}
+.rsvp .right .qtos select{
+	width: 46%;
+	height: 50px;
+	border:#d7d6d0 solid 1px;
+}
+.rsvp .right .enviar button{
+	margin-top: 30px;
+	width: 100%;
+	height: 50px;
+	border:none;
+	background-color: #1c2c42;
+	color: white;
+}
+.rsvp .right .enviar h2{
+	width: 80px;
+	margin:0 auto;
+}
+.rsvp .right .enviar button:hover{
+	background-color: #274165;
+
+}
+.rsvp .right .enviar button:hover h2{
+	border-bottom: 2px solid white;
+}
+#enviar-popup{
+	display: none;
+	width: 420px;
+	height: 389px;
+    position: relative;
+    top: -389px;
+    left:0px;
+    background-color: white;
+    border:1px solid #1c2c42;
+	z-index:1;
+}
+#enviar-popup .close{
+	height: 80px;
+	text-align:right;
+}
+#enviar-popup .close img{
+	position: relative;
+	top:20px;
+	right: 20px;
+}
+#enviar-popup .obrigado-mt{
+	padding-top: 50px;
+	text-align: center;
+}
+#enviar-popup .obrigado{
+	font-weight: 300;
+	font-size: 23px;
+}
+#enviar-popup .mt{
+	font-weight:500;
+	font-size: 30px;
+}
+/*========onde===========*/
+.onde {
+	height: 544px;
+}
+.onde .text{
+	width: 822px;
+	margin: 0 auto;
+	text-align: center;
+}
+.onde h1{
+	position: relative;
+	font-weight: bold;
+	font-size: 35px;
+	padding-top: 70px;
+}
+.onde h1::before {
+    content: "";
+    border-bottom: 1px solid;
+    position: absolute;
+    width: 406px;
+    left: -124px;
+    top: 0px;
+    color:#d7d6d0;
+    }
+.onde h1::after {
+    content: "";
+    border-bottom: 1px solid;
+    position: absolute;
+    width: 690px;
+    left: 298px;
+    top: 0px;
+    color:#d7d6d0;
+    }
+.onde h2{
+	font-size: 21px;
+}
+.onde .light{
+	font-weight: 300;
+}
+.onde .sug{
+	padding-top: 60px;
+}
+.onde .bristol{
+	padding-top: 25px;
+}
+
+.onde .bristolhoteis{
+	font-weight: 300;
+	margin: 0;
+	padding: 15px;
+	font-size: 23px;
+}
+.onde .bristolhoteis a{
+	color: #1a2a40;
+	border-bottom: 1px solid #4a5260;
+}
+.onde span{
+	font-size: 20px;
+	color: #909aa8;
+}
+
+.onde .pinh{
+	height: 69px;
+	text-align: center;
+	padding-top: 37px;
+}
+
+/*========presentes=========*/
+.presentes{
+	height: 1238px;
+	text-align: center;
+	clear: both;
+}
+.presentes .main{
+	height: 1238px;
+}
+.presentes .main .text h1{
+	font-weight: bold;
+	font-size: 35px;
+	padding-top: 70px;
+}
+.presentes .main .text span{
+	font-weight: 300;
+	font-style: 35px;
+	font-size: 22px;
+	padding-top: 20px;
+}
+.presentes .image{
+	padding-top: 70px;
+	width:1200px;
+	height: 1100px;
+	margin: 0 auto;
+}
+.presentes .image .width{
+	width: 33.3333333%;
+	float: left;
+}
+.presentes .image .img-left{
+	text-align: left;
+}
+.presentes .image .img-center{
+	text-align: center;
+}
+.presentes .image .img-right{
+	text-align: right;
+}
+.presentes .image .image-text-left{
+	float: left;
+	width: 60%;
+	text-align: left;
+}
+.presentes .image .image-text{
+	margin: 0;
+	height: 124px;
+	width: 96.5%;
+	padding-left: 25px;
+}
+.presentes .image .ten{
+	padding-top: 10px;
+}
+.presentes .image .light{
+	font-weight: 300;
+}
+.presentes .image .gia{
+	padding-top: 7px;
+}
+.presentes .image button{
+	float: right;
+	margin-top: 36px;
+	width: 130px;
+	height: 45px;
+	color: #c7cacd;
+	background-color: #1c2c42;
+	border: none;
+}
+.presentes .image .button{
+	padding-top: 4px;
+}
+/*=======footer========*/
+#footer{
+	height: 330px;
+	text-align: center;
+}
+#footer img{
+	margin-top: 92px;
+}
+#footer .left{
+	width: 500px; 
+	color: #eae5dd;
+	margin:0;
+    position: relative;
+    top: 165px;
+    left: 80px;
+}
+#footer .right{
+	width: 500px; 
+	color: #eae5dd;
+	margin:0;
+    position: relative;
+    top: -78px;
+    left: 765px;
+}
+
+
+}
